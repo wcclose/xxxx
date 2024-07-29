@@ -20,7 +20,7 @@ const $ = new Env('HeyTeaAuthorization');
     if (authorization) {
       await handleAuthorization(authorization);
     } else {
-      $.msg("警告", "请求头中未找到Authorization");
+      $.msg("警告", "请求头中未找到喜茶的Authorization");
     }
   } catch (error) {
     handleErrorMessage(error);
@@ -34,7 +34,7 @@ async function handleAuthorization(authorization) {
   const saveSuccess = await saveDataToEnv('heytea_auth', authorization);
   if (saveSuccess && !$.isMute) {
     // 发送通知
-    $.msg("通知", "HeyTea 请求的 Authorization", authorization);
+    $.msg("通知", "喜茶的 Authorization", authorization);
   }
 }
 
