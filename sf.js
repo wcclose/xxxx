@@ -1,6 +1,6 @@
 /*
 [rewrite_local]
-^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share url script-request-header https://raw.githubusercontent.com/wcclose/xxxx/blob/main/sf.js
+^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/ url script-request-header https://raw.githubusercontent.com/wcclose/xxxx/blob/main/sf.js
 [mitm]
 hostname = mcs-mimp-web.sf-express.com
 */
