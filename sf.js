@@ -12,7 +12,6 @@ const $ = new Env('SFExpressURLFetcher');
 
 !(async () => {
   try {
-    // 确保处于有效请求环境中
     if (typeof $request === 'undefined' || typeof $request.headers !== 'object') {
       throw new Error('无效的HTTP请求回调环境');
     }
@@ -23,10 +22,14 @@ const $ = new Env('SFExpressURLFetcher');
       'https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app'
     ];
     const randomUrl = urls[Math.floor(Math.random() * urls.length)];
-    
+
+    $.log(`随机选择的URL: ${randomUrl}`);
+
     // 发送请求
     const response = await $.get(randomUrl);
-    
+
+    $.log(`请求响应状态码: ${response.statusCode}`);
+
     // 输出完整的 URL
     if (response.statusCode === 200) {
       $.msg("通知", "抓取的 URL", randomUrl);
@@ -39,6 +42,16 @@ const $ = new Env('SFExpressURLFetcher');
     $.done();
   }
 })();
+
+
+const response = await $.get({
+  url: randomUrl,
+  headers: {
+    'User-Agent': '你的用户代理',
+    // 添加其他需要的请求头
+  }
+});
+
 
 function handleErrorMessage(error) {
   console.error(`脚本执行时发生错误: ${error}`);
