@@ -1,3 +1,11 @@
+[rewrite_local]
+^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/(weChat|app) url script-request-header notify_url.js
+
+[mitm]
+hostname = mcs-mimp-web.sf-express.com
+
+
+
 // 文件名：sf.js
 const $ = new Env('SFExpressURLFetcher');
 
