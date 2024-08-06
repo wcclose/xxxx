@@ -1,6 +1,6 @@
 /*
 [rewrite_local]
-^https:\/\/air.tb.ele.me\/app\/conch-page\/svip-grade-home\/ url script-request-header https://raw.githubusercontent.com/funyhook/birdbls/main/qx/elm/elm.js
+^https:\/\/air.tb.ele.me\/app\/conch-page\/svip-grade-home\/ url script-request-header https://raw.githubusercontent.com/wcclose/xxxx/blob/main/elm.js
 [mitm]
 hostname = air.tb.ele.me
 */
