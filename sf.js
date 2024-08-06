@@ -1,5 +1,5 @@
 [rewrite_local]
-^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/(weChat|app) url script-request-header notify_url.js
+^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/(weChat|app) url script-request-header sf.js
 
 [mitm]
 hostname = mcs-mimp-web.sf-express.com
